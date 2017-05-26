@@ -34,6 +34,7 @@ void Draw() {
     gfPosX += gfDeltaX;
     if (gfPosX >= 1.0 || gfPosX <= 0.0) {
         gfDeltaX = -gfDeltaX;
+
     }
 }
 
