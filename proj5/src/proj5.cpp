@@ -39,7 +39,6 @@ void Draw() {
 
 void Timer(int iUnused)
 {
-    glColor3f(gfPosX, 1.0, gfPosX);
    glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }
