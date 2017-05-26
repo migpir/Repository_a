@@ -23,10 +23,12 @@ GLfloat gfDeltaX = .01;
 
 void Draw() {
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0, 1.0, 1.0);
+    glColor3f(1.0, .50, 1.0);
     glBegin(GL_LINES);
         glVertex3f(gfPosX, 0.25, 0.0);
-        glVertex3f(1.0 - gfPosX, 0.75,0.0);
+//        glVertex3f(1.0 - gfPosX, 0.75,0.0);
+        glVertex3f(gfPosX, gfPosX, 0.0);
+        glColor3f(1.0, gfPosX, gfPosX);
     glEnd();
     glutSwapBuffers();
     gfPosX += gfDeltaX;
@@ -37,7 +39,8 @@ void Draw() {
 
 void Timer(int iUnused)
 {
-    glutPostRedisplay();
+    glColor3f(gfPosX, 1.0, gfPosX);
+   glutPostRedisplay();
     glutTimerFunc(30, Timer, 0);
 }
 
