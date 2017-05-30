@@ -24,7 +24,8 @@ GLfloat gfDeltaX = .01;
 void Draw() {
     glClear(GL_COLOR_BUFFER_BIT);
     glColor3f(1.0, .50, 1.0);
-    glBegin(GL_LINES);
+//    glBegin(GL_LINES);
+        glBegin(GL_LINE_LOOP);
         glVertex3f(gfPosX, 0.25, 0.0);
 //        glVertex3f(1.0 - gfPosX, 0.75,0.0);
         glVertex3f(gfPosX, gfPosX, 0.0);
